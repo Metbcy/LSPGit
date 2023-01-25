@@ -1,3 +1,6 @@
+/**
+ * Name: Amir Bredy
+ */
 package org.howard.edu.hw1;
 
 public class HelloWorld {

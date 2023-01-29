@@ -1,7 +1,7 @@
 /**
  * Name: Amir Bredy
  */
-package org.howard.edu.hw1;
+package org.howard.edu.assignment1;
 
 public class HelloWorld {
 	public static void main(String[] args) {

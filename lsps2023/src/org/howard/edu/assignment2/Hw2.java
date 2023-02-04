@@ -36,12 +36,13 @@ public class Hw2 {
                     }
                 }
             }
-            scanner.close();
             for (String word : wordFrequency.keySet()) {
                 System.out.println(word + ": " + wordFrequency.get(word));
             }
-        } catch (FileNotFoundException e) {
-            System.out.println("Error: Unable to find textfile.txt");
+        } finally {
+        	scanner.close();
         }
     }
+        throw new FileNotFoundException();
+}
 }

@@ -1,4 +1,4 @@
-package org.howard.edu.hw2;
+package org.howard.edu.assignment2;
 
 public class Hw2 {
 

@@ -9,9 +9,14 @@ import java.util.HashMap;
 public class Hw2 {
 	public String readToString(String resource) throws FileNotFoundException {
         URL url = getClass().getClassLoader().getResource(resource);
+        
+        System.out.println(url.getPath());
+        
         if (url != null) {
 			File file = new File(url.getPath());
+			
 			Scanner scanner = null;
+			
 	        try {
 	        	scanner = new Scanner(file);
 				HashMap<String, Integer> wordFrequency = new HashMap<>();
@@ -36,7 +41,7 @@ public class Hw2 {
 	                    }
 	                }
 	            }
-	            
+	            System.out.println(wordFrequency);
 	        } finally {
 	        	scanner.close();
 	        }
@@ -44,5 +49,3 @@ public class Hw2 {
 	        throw new FileNotFoundException();
 	}
 	}
-
-

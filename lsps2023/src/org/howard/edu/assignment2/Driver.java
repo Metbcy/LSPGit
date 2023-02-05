@@ -9,7 +9,8 @@ public class Driver {
 		try {
 			fr.readToString("main/java/resources/words.txt");
 		} catch (FileNotFoundException e) {
-			System.out.println("Unable to open resource");
+			System.out.println("");
 		}
 	}
 }
+

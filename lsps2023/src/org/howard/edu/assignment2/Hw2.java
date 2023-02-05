@@ -31,7 +31,7 @@ public class Hw2 {
 	                    if (word.length() <= 3) {
 	                        continue;
 	                    }
-	                    
+	                   
 	                    if (!word.matches("[0-9]+")) {
 	                        if (wordFrequency.containsKey(word)) {
 	                            wordFrequency.put(word, wordFrequency.get(word) + 1);
@@ -41,7 +41,8 @@ public class Hw2 {
 	                    }
 	                }
 	            }
-	            System.out.println(wordFrequency);
+	            for(String i:wordFrequency.keySet()) {
+	            	System.out.println(i + " " + wordFrequency.get(i));}
 	        } finally {
 	        	scanner.close();
 	        }

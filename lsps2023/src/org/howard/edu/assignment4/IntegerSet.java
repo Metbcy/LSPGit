@@ -39,6 +39,7 @@ public class IntegerSet {
     
 	/** 
 	* function to return the length of a set
+	* @return size of the set
 	*/
     public int length(){
         return set.size();
@@ -87,7 +88,7 @@ public class IntegerSet {
 				return max;
 			}
 			else {
-		    IntegerSetException emptySet = new IntegerSetException("This set is empty, we can't return the largest element");
+		    IntegerSetException emptySet = new IntegerSetException("This set is empty a largest element cannot be returned");
 		    throw emptySet;
 			}
 		} 
@@ -116,7 +117,7 @@ public class IntegerSet {
 				return min;
 			}
 			else {
-		    IntegerSetException emptySet = new IntegerSetException("This set is empty, we can't return the smallest element");
+		    IntegerSetException emptySet = new IntegerSetException("This set is empty a smallest element cannot be returned");
 		    throw emptySet;
 			}
 		} 
@@ -153,7 +154,7 @@ public class IntegerSet {
     /** 
      * Function to find the union of the current set and another set
      * @param IntegerSet
-     */
+     */   
     public void union(IntegerSet other) {
         assert set.size() > 0 && other.set.size() > 0;
         ArrayList<Integer> temp = new ArrayList<>(set);
@@ -192,13 +193,16 @@ public class IntegerSet {
         }
         set = temp;
     }
+    
     /** 
      * Function to find whether a set is empty
      * @return whether if a set is empty or not
      */
+    
     public boolean isEmpty() {
         return set.isEmpty();
     }
+    
     /** 
      * Returns the string representation of the IntegerSet
      */

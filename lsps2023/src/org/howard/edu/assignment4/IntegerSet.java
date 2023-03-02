@@ -202,7 +202,7 @@ public class IntegerSet {
     }
     
     /** 
-     * @Return the string representation of the IntegerSet
+     * @return the string representation of the IntegerSet
      */
     public String toString() {
         return set.toString();

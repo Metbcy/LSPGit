@@ -53,7 +53,7 @@ public class Driver {
 		System.out.println("Does the Third Set contains the number 50?: \n" + ThirdSet.contains(50));
 		
 		//Testing length method with the sets
-		System.out.println("Our populated Set size is: \n" + SecondSet.length());
+		System.out.println("Our Set size is: \n" + SecondSet.length());
 		System.out.println("Our empty Set size is: \n" + EmptySet.length());
 		
 		// Testing smallest and largest methods with the sets
@@ -81,7 +81,7 @@ public class Driver {
 		FirstSet.union(SecondSet);
 		System.out.println("Our first set after using Union is: \n" + FirstSet.toString());
 		
-		// Test diff function on the sets
+		// Test "diff" or difference function on the sets
 		FirstSet.diff(SecondSet);
 		System.out.println("The value of our first set after using diff with FirstSet and SecondSet is: \n" + FirstSet.toString());
 

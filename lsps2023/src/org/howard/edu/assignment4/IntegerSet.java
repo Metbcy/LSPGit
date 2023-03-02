@@ -129,7 +129,6 @@ public class IntegerSet {
 	
     /**
      * Adds an element from the set.
-     * 
      * @param item The integer to remove from the set.
      */
 	
@@ -141,7 +140,6 @@ public class IntegerSet {
     
     /**
      * Removes an element from the set.
-     * 
      * @param item 
      */
     
@@ -204,7 +202,7 @@ public class IntegerSet {
     }
     
     /** 
-     * Returns the string representation of the IntegerSet
+     * @Return the string representation of the IntegerSet
      */
     public String toString() {
         return set.toString();

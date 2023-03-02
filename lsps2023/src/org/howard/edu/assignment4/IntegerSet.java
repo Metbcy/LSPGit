@@ -8,26 +8,44 @@ import java.util.*;
  */
 
 public class IntegerSet {
-	// Creating an Exception class
+	/** 
+	* Creating an Exception class
+	*/
     private class IntegerSetException extends Exception {
         IntegerSetException(String str){
             super(str);
         }
     }
     
+    /**
+     * creating an array
+     */
+    
     private ArrayList<Integer> set = new ArrayList<>();
     
+    /**
+     * This will be our default constructor
+     */
     public IntegerSet() {}
     
-    // Clearing the set
+	/** 
+	* function to clear the set
+	*/
+    
     public void clear() {
         set.clear();
     }
-    // function to return the length of a set
+    
+	/** 
+	* function to return the length of a set
+	*/
     public int length(){
         return set.size();
     }
-    // Boolean func that returns true if two sets are equal
+    /**
+     * @param IntegerSet other
+     * @return true if two sets are equal
+     */
     public boolean equals(IntegerSet other) {
         if (set.size() != other.set.size()) {
             return false;
@@ -45,7 +63,12 @@ public class IntegerSet {
         return set.contains(value);
     }
     
-	// Function that returns the largest integer in the set
+    /**
+     * Finds the largest element in the set.
+     * 
+     * @return The largest element in the set, or throws an exception if the set is empty/returns 10000.
+     */
+    
 	public int largest()  {
 		int max = 0;
 		try {
@@ -69,7 +92,12 @@ public class IntegerSet {
 		return 10000;
 	}; 
 	
-	// Function that returns the smallest integer in the set
+    /**
+     * Finds the smallest element in the set.
+     * 
+     * @return The smallest element in the set, or throws an exception if the set is empty.
+     */
+	
 	public int smallest() {
 		int min = 0;
 		try {
@@ -92,20 +120,34 @@ public class IntegerSet {
 		return 0;
 	};
 	
-	// Function to add an integer to the set
+    /**
+     * Adds an element from the set.
+     * 
+     * @param item The integer to remove from the set.
+     */
+	
     public void add(int item) {
         if (!set.contains(item)) {
             set.add(item);
         }
     }
     
-    // Function to remove an integer to the set
+    /**
+     * Removes an element from the set.
+     * 
+     * @param item The integer to remove from the set.
+     */
+    
     public void remove(int item) {
         if (set.contains(item)){
             set.remove(Integer.valueOf(item));
         }
     }
-    // Function to find the union of the current set and another set
+    
+    /** 
+     * Function to find the union of the current set and another set
+     * @param IntegerSet other
+     */
     public void union(IntegerSet other) {
         assert set.size() > 0 && other.set.size() > 0;
         ArrayList<Integer> temp = new ArrayList<>(set);
@@ -116,7 +158,11 @@ public class IntegerSet {
         }
         set = temp;
     }
-    // Function to find the intersection of the current set and another set
+    
+    /** 
+     * Function to find the intersection of the current set and another set
+     * @param IntegerSet other
+     */
     public void intersect(IntegerSet other) {
         ArrayList<Integer> temp = new ArrayList<>();
         for (int i = 0; i < set.size(); i++) {
@@ -126,7 +172,11 @@ public class IntegerSet {
         }
         set = temp;
     }
-    // Function to find the difference of the current set and another set
+    
+    /** 
+     * Function to find the difference of the current set and another set
+     * @param IntegerSet other
+     */
     public void diff(IntegerSet other) {
         ArrayList<Integer> temp = new ArrayList<>();
         for (int i = 0; i < set.size(); i++) {
@@ -136,11 +186,16 @@ public class IntegerSet {
         }
         set = temp;
     }
-    // Function to find whether a set is empty
+    /** 
+     * Function to find whether a set is empty
+     * @return whether if a set is empty or not
+     */
     public boolean isEmpty() {
         return set.isEmpty();
     }
-    // Returns the string representation of the IntegerSet
+    /** 
+     * Returns the string representation of the IntegerSet
+     */
     public String toString() {
         return set.toString();
     }

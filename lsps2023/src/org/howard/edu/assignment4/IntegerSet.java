@@ -2,6 +2,7 @@ package org.howard.edu.assignment4;
 
 import java.util.*; 
 /** 
+ * Creation of the IntegerSet Data Structure
  * 
  * @author Amir Bredy
  *
@@ -43,7 +44,7 @@ public class IntegerSet {
         return set.size();
     }
     /**
-     * @param IntegerSet other
+     * @param IntegerSet
      * @return true if two sets are equal
      */
     public boolean equals(IntegerSet other) {
@@ -58,7 +59,12 @@ public class IntegerSet {
         }
         return true;
     }
-    // Boolean func that returns true if a set contains a value, will take an integer.
+    
+    /**
+     * 
+     * @param value
+     * @return true if a set contains a value
+     */
     public boolean contains(int value) {
         return set.contains(value);
     }
@@ -135,7 +141,7 @@ public class IntegerSet {
     /**
      * Removes an element from the set.
      * 
-     * @param item The integer to remove from the set.
+     * @param item 
      */
     
     public void remove(int item) {
@@ -146,7 +152,7 @@ public class IntegerSet {
     
     /** 
      * Function to find the union of the current set and another set
-     * @param IntegerSet other
+     * @param IntegerSet
      */
     public void union(IntegerSet other) {
         assert set.size() > 0 && other.set.size() > 0;
@@ -161,7 +167,7 @@ public class IntegerSet {
     
     /** 
      * Function to find the intersection of the current set and another set
-     * @param IntegerSet other
+     * @param IntegerSet
      */
     public void intersect(IntegerSet other) {
         ArrayList<Integer> temp = new ArrayList<>();
@@ -175,7 +181,7 @@ public class IntegerSet {
     
     /** 
      * Function to find the difference of the current set and another set
-     * @param IntegerSet other
+     * @param IntegerSet
      */
     public void diff(IntegerSet other) {
         ArrayList<Integer> temp = new ArrayList<>();

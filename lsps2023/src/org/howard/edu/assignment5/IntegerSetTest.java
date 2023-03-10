@@ -44,10 +44,27 @@ class IntegerSetTest {
 	}
 	
 	@Test
+	void testlargest() {
+		set.add(100);
+		set.add(200);
+		set.add(300);
+		set.add(400);
+		assertTrue(set.largest() == 400);
+	}
+	
+	@Test
 	void testclear() {
 		set.add(1);
 		set.clear();
 		assertEquals(set.set.size(),0);
+	}
+	
+	@Test
+	void testequal() {
+		IntegerSet SetList = new IntegerSet();
+		SetList.add(10);
+		set.add(10);
+		assertTrue(set.equals(SetList));
 	}
 
 	@Test

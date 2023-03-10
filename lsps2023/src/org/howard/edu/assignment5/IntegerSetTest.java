@@ -1,5 +1,9 @@
 package org.howard.edu.assignment5;
 
+/**
+ * @author Amir Bredy
+ */
+
 import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
@@ -21,10 +25,16 @@ class IntegerSetTest {
 	void tearDown() throws Exception {
 		set = null;
 	}
-
+	
+	@Test
+	void testclear() {
+		set.add(1);
+		set.clear();
+		assertEquals(set.set.size(),0);
+	}
 
 	@Test
-	void addtest() {
+	void testadd() {
 		ArrayList <Integer> SetList = new ArrayList <Integer>();
 		SetList.add(20);
 		SetList.add(40);

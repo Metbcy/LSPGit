@@ -24,8 +24,17 @@ class IntegerSetTest {
 
 
 	@Test
-	void test() {
-		fail("Not yet implemented");
+	void addtest() {
+		ArrayList <Integer> SetList = new ArrayList <Integer>();
+		SetList.add(20);
+		SetList.add(40);
+		SetList.add(60);
+		
+		set.add(20);
+		set.add(40);
+		set.add(60);
+			
+		assertTrue(SetList.equals(set.set));
 	}
 
 }

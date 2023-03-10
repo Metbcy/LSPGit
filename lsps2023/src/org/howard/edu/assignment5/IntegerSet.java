@@ -22,7 +22,7 @@ public class IntegerSet {
      * creating an array
      */
     
-    private ArrayList<Integer> set = new ArrayList<>();
+    ArrayList<Integer> set = new ArrayList<>();
     
     /**
      * This will be our default constructor

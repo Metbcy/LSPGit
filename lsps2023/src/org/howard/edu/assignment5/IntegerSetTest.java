@@ -33,7 +33,7 @@ class IntegerSetTest {
 		set.add(15);
 		set.add(20);
 		set.add(25);
-		assertTrue(set.length()== 5);
+		assertTrue(set.length() == 5);
 		
 	}
 	

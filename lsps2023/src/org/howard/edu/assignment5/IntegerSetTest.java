@@ -27,6 +27,23 @@ class IntegerSetTest {
 	}
 	
 	@Test
+	void testlength() {
+		set.add(5);
+		set.add(10);
+		set.add(15);
+		set.add(20);
+		set.add(25);
+		assertTrue(set.length()== 5);
+		
+	}
+	
+	@Test
+	void testcontains() {
+		set.add(3);
+		assertTrue(set.contains(3));
+	}
+	
+	@Test
 	void testclear() {
 		set.add(1);
 		set.clear();

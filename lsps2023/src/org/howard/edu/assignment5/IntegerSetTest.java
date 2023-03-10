@@ -53,6 +53,15 @@ class IntegerSetTest {
 	}
 	
 	@Test
+	void testsmallest() {
+		set.add(100);
+		set.add(200);
+		set.add(300);
+		set.add(400);
+		assertTrue(set.largest() == 100);
+	}
+	
+	@Test
 	void testclear() {
 		set.add(1);
 		set.clear();
@@ -79,6 +88,15 @@ class IntegerSetTest {
 		set.add(60);
 			
 		assertTrue(SetList.equals(set.set));
+	}
+	
+	@Test
+	void testremove() {
+		set.add(20);
+		set.add(40);
+		set.add(60);
+		set.remove(40);
+		assertFalse(set.contains(40));
 	}
 
 }

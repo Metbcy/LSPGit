@@ -98,5 +98,60 @@ class IntegerSetTest {
 		set.remove(40);
 		assertFalse(set.contains(40));
 	}
+	
+	@Test
+	void testunion() {
+		set.add(5);
+		set.add(10);
+		set.add(15);
+		IntegerSet SecondSet = new IntegerSet();
+		SecondSet.add(20);
+		SecondSet.add(25);
+		SecondSet.add(30);
+		set.union(SecondSet);
+		assertEquals(set.set, new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6)));
+	}
+	
+	@Test
+	void testintersect() {
+		IntegerSet SecondSet = new IntegerSet();
+		set.add(5);
+		set.add(10);
+		set.add(15);
 
+		SecondSet.add(10);
+		SecondSet.add(25);
+		SecondSet.add(15);
+		
+		set.intersect(SecondSet);
+		assertEquals(set.set, new ArrayList<Integer>(Arrays.asList(10,15)));
+	}
+	
+	@Test
+	void testdiff() {
+		set.add(5);
+		set.add(10);
+		set.add(15);
+
+		IntegerSet SecondSet = new IntegerSet();
+		SecondSet.add(5);
+		SecondSet.add(10);
+		SecondSet.add(35);
+		ArrayList <Integer> SetList = new ArrayList<Integer>(Arrays.asList(5,10));
+		set.diff(SecondSet);
+		assertEquals(set.set, SetList);
+	}
+	@Test
+	void testempty() {
+		assertTrue(set.isEmpty());
+	}
+	@Test
+	void stringtest() {
+		set.add(10);
+		set.add(20);
+		set.add(30);
+		set.add(40);
+		
+		assertEquals(set.toString(), "[10, 20, 30, 40]");
+	}
 }

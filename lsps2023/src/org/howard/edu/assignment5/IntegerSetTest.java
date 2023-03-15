@@ -26,7 +26,10 @@ class IntegerSetTest {
 		set = null;
 	}
 	
-	@Test
+	/**
+	 * Test for length function
+	 */
+	@Test 
 	void testlength() {
 		set.add(5);
 		set.add(10);
@@ -37,11 +40,18 @@ class IntegerSetTest {
 		
 	}
 	
+	/**
+	 * Test for contains function
+	 */
 	@Test
 	void testcontains() {
 		set.add(3);
 		assertTrue(set.contains(3));
 	}
+	
+	/**
+	 * Test for largest function
+	 */
 	
 	@Test
 	void testlargest() {
@@ -52,6 +62,10 @@ class IntegerSetTest {
 		assertTrue(set.largest() == 400);
 	}
 	
+	/**
+	 * Test for smallest function
+	 */
+	
 	@Test
 	void testsmallest() {
 		set.add(100);
@@ -61,12 +75,20 @@ class IntegerSetTest {
 		assertTrue(set.largest() == 100);
 	}
 	
+	/**
+	 * Test for clearing function
+	 */
+	
 	@Test
 	void testclear() {
 		set.add(1);
 		set.clear();
 		assertEquals(set.set.size(),0);
 	}
+	
+	/**
+	 * Test for equal function
+	 */
 	
 	@Test
 	void testequal() {
@@ -75,7 +97,11 @@ class IntegerSetTest {
 		set.add(10);
 		assertTrue(set.equals(SetList));
 	}
-
+	
+	/**
+	 * Test for adding function
+	 */
+	
 	@Test
 	void testadd() {
 		ArrayList <Integer> SetList = new ArrayList <Integer>();
@@ -90,6 +116,10 @@ class IntegerSetTest {
 		assertTrue(SetList.equals(set.set));
 	}
 	
+	/**
+	 * Test for removal function
+	 */
+	
 	@Test
 	void testremove() {
 		set.add(20);
@@ -98,6 +128,10 @@ class IntegerSetTest {
 		set.remove(40);
 		assertFalse(set.contains(40));
 	}
+	
+	/**
+	 * Test for union function
+	 */
 	
 	@Test
 	void testunion() {
@@ -111,6 +145,10 @@ class IntegerSetTest {
 		set.union(SecondSet);
 		assertEquals(set.set, new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6)));
 	}
+	
+	/**
+	 * Test for intersection function
+	 */
 	
 	@Test
 	void testintersect() {
@@ -127,6 +165,10 @@ class IntegerSetTest {
 		assertEquals(set.set, new ArrayList<Integer>(Arrays.asList(10,15)));
 	}
 	
+	/**
+	 * Test for difference function
+	 */
+	
 	@Test
 	void testdiff() {
 		set.add(5);
@@ -141,10 +183,20 @@ class IntegerSetTest {
 		set.diff(SecondSet);
 		assertEquals(set.set, SetList);
 	}
+	
+	/**
+	 * Test for empty function
+	 */
+	
 	@Test
 	void testempty() {
 		assertTrue(set.isEmpty());
 	}
+	
+	/**
+	 * Test for string function
+	 */
+	
 	@Test
 	void stringtest() {
 		set.add(10);

@@ -72,7 +72,7 @@ class IntegerSetTest {
 		set.add(200);
 		set.add(300);
 		set.add(400);
-		assertTrue(set.largest() == 100);
+		assertTrue(set.smallest() == 100);
 	}
 	
 	/**

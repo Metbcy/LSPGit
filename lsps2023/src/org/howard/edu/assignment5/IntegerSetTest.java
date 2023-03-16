@@ -143,7 +143,7 @@ class IntegerSetTest {
 		SecondSet.add(25);
 		SecondSet.add(30);
 		set.union(SecondSet);
-		assertEquals(set.set, new ArrayList<Integer>(Arrays.asList(1, 2, 3, 4, 5, 6)));
+		assertEquals(set.set, new ArrayList<Integer>(Arrays.asList(5, 10, 15, 20, 25, 30)));
 	}
 	
 	/**

@@ -179,7 +179,7 @@ class IntegerSetTest {
 		SecondSet.add(5);
 		SecondSet.add(10);
 		SecondSet.add(35);
-		ArrayList <Integer> SetList = new ArrayList<Integer>(Arrays.asList(5,10));
+		ArrayList <Integer> SetList = new ArrayList<Integer>(Arrays.asList(15));
 		set.diff(SecondSet);
 		assertEquals(set.set, SetList);
 	}

@@ -68,11 +68,11 @@ class IntegerSetTest {
 	
 	@Test
 	void testsmallest() {
-		set.add(100);
-		set.add(200);
-		set.add(300);
-		set.add(400);
-		assertTrue(set.smallest() == 100);
+		set.add(0);
+		set.add(10);
+		set.add(15);
+		set.add(20);
+		assertTrue(set.smallest() == 0);
 	}
 	
 	/**

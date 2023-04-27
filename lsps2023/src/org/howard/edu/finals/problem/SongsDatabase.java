@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Set;
 
 public class SongsDatabase {
+	
     /* Key is the genre, HashSet contains associated songs */
     private Map<String, HashSet<String>> map = new HashMap<String, HashSet<String>>();
 

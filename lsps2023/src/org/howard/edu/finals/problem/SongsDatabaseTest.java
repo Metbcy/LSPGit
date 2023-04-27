@@ -18,25 +18,28 @@ public class SongsDatabaseTest {
         db.addSong("Rap", "Savage");
         db.addSong("Rap", "Gin and Juice");
         
-
+        // Asserting True and False Pop songs
         Set<String> popSongs = db.getSongs("Pop");
         assertTrue(popSongs.contains("Love Yourself"));
         assertTrue(popSongs.contains("Kill Bill"));
         assertFalse(popSongs.contains("Always There"));
         assertFalse(popSongs.contains("TNT"));
-
+        
+        // Asserting True and False Rock songs
         Set<String> rockSongs = db.getSongs("Rock");
         assertTrue(rockSongs.contains("TNT"));
         assertTrue(rockSongs.contains("Hotel California"));
         assertFalse(rockSongs.contains("Love Yourself"));
         assertFalse(rockSongs.contains("Gin and Juice"));
 
+        // Asserting True and False Rap songs
         Set<String> rapSongs = db.getSongs("Rap");
         assertTrue(rapSongs.contains("Gin and Juice"));
         assertTrue(rapSongs.contains("Savage"));
         assertFalse(rapSongs.contains("Hotel California"));
         assertFalse(rapSongs.contains("Kill Bill"));
         
+        // Asserting True and False Jazz songs
         Set<String> jazzSongs = db.getSongs("Jazz");
         assertTrue(jazzSongs.contains("Always There"));
         assertTrue(jazzSongs.contains("What a Wonderful World"));

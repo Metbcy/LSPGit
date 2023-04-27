@@ -17,6 +17,10 @@ public class SongsDatabaseTest {
         SongHash.addSong("Jazz", "Always There");
         SongHash.addSong("Rap", "Savage");
         SongHash.addSong("Rap", "Gin and Juice");
+        assertTrue(2 == SongHash.getSongs("Pop").size());
+        assertTrue(2 == SongHash.getSongs("Rock").size());
+        assertTrue(2 == SongHash.getSongs("Jazz").size());
+        assertTrue(2 == SongHash.getSongs("Rap").size());
         
         // Asserting True and False Pop songs
         Set<String> popSongs = SongHash.getSongs("Pop");
@@ -24,6 +28,7 @@ public class SongsDatabaseTest {
         assertTrue(popSongs.contains("Kill Bill"));
         assertFalse(popSongs.contains("Always There"));
         assertFalse(popSongs.contains("TNT"));
+        
         
         // Asserting True and False Rock songs
         Set<String> rockSongs = SongHash.getSongs("Rock");
@@ -57,15 +62,26 @@ public class SongsDatabaseTest {
         Set<String> reggaeSongs = SongHash.getSongs("Reggae");
         assertTrue(reggaeSongs.contains("Girls Dem Sugar"));
         assertFalse(rapSongs.contains("Girls Dem Sugar"));
+        assertTrue(1 == SongHash.getSongs("Reggae").size());
 
         // Test adding a duplicate song to the same genre
         SongHash.addSong("Pop", "Kill Bill");
         assertEquals(2, popSongs.size());
         
-        //Print statements to check the code
+        //Print statements to check getGenreOfSong
         System.out.println(SongHash.getGenreOfSong("Savage")); // prints "Rap"
         System.out.println(SongHash.getGenreOfSong("Always There")); // prints "Jazz"
+        System.out.println(SongHash.getGenreOfSong("TNT")); // prints "Rock"
         System.out.println(SongHash.getGenreOfSong("Kill Bill")); // prints "Pop"
         System.out.println(SongHash.getGenreOfSong("Girls Dem Sugar")); // prints "Reggae"
+        
+      //Print statements to check getSongs
+        System.out.println(SongHash.getSongs("Rap")); // prints "Song List for Rap"
+        System.out.println(SongHash.getSongs("Pop")); // prints "Song List for Pop"
+        System.out.println(SongHash.getSongs("Rock")); // prints "Song List for Rock"
+        System.out.println(SongHash.getSongs("Jazz")); // prints "Song List for Jazz"
+        System.out.println(SongHash.getSongs("Reggae")); // prints "Song List for Reggae"
+        
+       
     }
 }

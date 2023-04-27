@@ -54,8 +54,8 @@ public class SongsDatabaseTest {
 
         // Test adding a song to a new genre
         SongHash.addSong("Reggae", "Girls Dem Sugar");
-        Set<String> ReggaeSongs = SongHash.getSongs("Reggae");
-        assertTrue(ReggaeSongs.contains("Girls Dem Sugar"));
+        Set<String> reggaeSongs = SongHash.getSongs("Reggae");
+        assertTrue(reggaeSongs.contains("Girls Dem Sugar"));
         assertFalse(rapSongs.contains("Girls Dem Sugar"));
 
         // Test adding a duplicate song to the same genre
